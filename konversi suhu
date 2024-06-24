@@ -9,8 +9,8 @@ import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton
 
 class TemperatureConverter(QMainWindow):
-    def _init_(self):
-        super()._init_()
+    def __init__(self):
+        super().__init__()
         self.setWindowTitle("Konversi Suhu Celcius")
         self.setGeometry(100, 100, 300, 200)
 
@@ -61,7 +61,7 @@ class TemperatureConverter(QMainWindow):
             self.kelvin_result.setText("Error")
             self.reamur_result.setText("Error")
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = TemperatureConverter()
     window.show()
